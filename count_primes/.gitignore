@@ -1,0 +1,6 @@
+count_primes
+*.o
+*.d*
+*~
+tests/*~
+tests/*.results*

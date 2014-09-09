@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+
+# Process command-line arguments
+while [[ $# > 0 ]]
+do
+    key="$1"
+    case $key in
+	-v|--verbose)
+	    VERBOSE=1
+	    shift
+	    ;;
+	--)
+	    shift
+	    break
+	    ;;
+	*)
+	    break
+	    ;;
+    esac
+done
+
+LANKATOOLS=/afs/csail.mit.edu/proj/courses/6.172/bin/
+
+if [ "${VERBOSE}" == "1" ]; then
+    echo "Pushing ./count_primes to Lanka"
+fi
+
+${LANKATOOLS}/lput ./count_primes
