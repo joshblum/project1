@@ -89,7 +89,7 @@ clean :
 ###########################################################################
 
 TESTSDIR = tests
-RUNTEST = ./run_test.py
+RUNTEST = ./run_tests.py
 
 .PHONY : tests clean_tests test_prepush
 
